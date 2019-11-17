@@ -3,5 +3,9 @@ class LetExp extends Exp {
   private Exp d;
   private Exp e;
   LetExp(String x, Exp d, Exp e) {this.x = x; this.d = d; this.e = e;}
+
+  void emit(Env<Integer> env, int depth) throws Env.UndefinedId {
+      
+  }
 }
 
