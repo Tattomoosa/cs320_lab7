@@ -5,7 +5,11 @@ class LetExp extends Exp {
   LetExp(String x, Exp d, Exp e) {this.x = x; this.d = d; this.e = e;}
 
   void emit(Env<Integer> env, int depth) throws Env.UndefinedId {
-      
+      d.emit(env, depth);
+      ++depth;
+      e.emit(env.extend(x, depth), depth);
+      System.out.printf("SWAP 1\n");
+      System.out.println("POP");
   }
 }
 

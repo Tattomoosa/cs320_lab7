@@ -1,1 +1,1 @@
-let x = 21 in x + x
+let x = 20 in let y = x + 2 in x + y

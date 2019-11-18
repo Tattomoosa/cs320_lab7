@@ -3,9 +3,7 @@ class IdExp extends Exp {
   IdExp(String id) {this.id = id;}
 
   void emit(Env<Integer> env, int depth) throws Env.UndefinedId {
-      int i = env.lookup(id);
-      System.out.println("HERE");
-      System.out.println(i);
+      System.out.printf("DUP %d\n", depth - env.lookup(id));
   }
 
 }

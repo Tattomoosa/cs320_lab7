@@ -3,7 +3,8 @@ class IdExp extends Exp {
   IdExp(String id) {this.id = id;}
 
   int eval(Env<Integer> env) throws Env.UndefinedId {
-    return env.lookup(id);
+    // return env.lookup(id);
+    System.out.printf("DUP %i\n", env.lookup(id));
   }
 }
 
