@@ -5,7 +5,7 @@ class DivExp extends Exp {
 
   void emit(Env<Integer> env, int depth) throws Env.UndefinedId {
       left.emit(env, depth);
-      right.emit(env, depth);
+      right.emit(env, ++depth);
       System.out.println("DIV");
   }
 }

@@ -1,4 +1,4 @@
 *.class
-clang
-g
+clangpp
+gpp
 output

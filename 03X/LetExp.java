@@ -6,10 +6,8 @@ class LetExp extends Exp {
 
   void emit(Env<Integer> env, int depth) throws Env.UndefinedId {
       d.emit(env, depth);
-      ++depth;
-      e.emit(env.extend(x, depth), depth);
-      System.out.printf("SWAP 1\n");
-      System.out.println("POP");
+      e.emit(env.extend(x, ++depth), depth);
+      System.out.printf("SWAP 1\nPOP\n");
   }
 }
 
